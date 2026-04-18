@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | Corian Sur Mesure</title>
+    <style>
+        /* Styles de base pour un design épuré */
+        :root {
+            --primary: #2c3e50;
+            --accent: #ecf0f1;
+            --text: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background-color: #fafafa;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        header p { margin-top: 10px; font-size: 1.2rem; font-weight: 300; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        
+        /* Section Produits */
+        .products {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--primary); }
+        
+        /* Boutons et Formulaire */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #1a252f; }
+        
+        .contact-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin-top: 4rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        button { cursor: pointer; border: none; }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: var(--primary);
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CORIAN EXCELLENCE</h1>
+        <p>Le design sur mesure, sculpté pour votre intérieur.</p>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center;">Nos Spécialités</h2>
+        <div class="products">
+            <div class="card">
+                <h3>Plans de Travail</h3>
+                <p>Cuisines modernes et hygiéniques. Résistance absolue et joints invisibles.</p>
+                <a href="#devis" class="btn">Demander un devis</a>
+            </div>
+            <div class="card">
+                <h3>Vasques & Salles de Bain</h3>
+                <p>Créations thermoformées aux courbes parfaites. Élégance et douceur au toucher.</p>
+                <a href="#devis" class="btn">Demander un devis</a>
+            </div>
+            <div class="card">
+                <h3>Mobilier Design</h3>
+                <p>Banques d'accueil, tables et créations architecturales uniques.</p>
+                <a href="#devis" class="btn">Demander un devis</a>
+            </div>
+        </div>
+
+        <div id="devis" class="contact-section">
+            <h2>Demander un devis sur mesure</h2>
+            <p>Décrivez votre projet (dimensions, couleur, usage), nous vous répondrons rapidement.</p>
+            <form action="https://formspree.io/f/ton_identifiant_ici" method="POST">
+                <input type="text" name="nom" placeholder="Votre Nom complet" required>
+                <input type="email" name="email" placeholder="Votre adresse E-mail" required>
+                <textarea name="message" rows="5" placeholder="Décrivez votre projet en Corian..." required></textarea>
+                <button type="submit" class="btn">Envoyer ma demande</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Corian Excellence - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
